@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Nand Dhakal - Innovator & Educator</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('images/bg.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: rgba(0, 0, 50, 0.9);
+            padding: 40px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        .profile-name {
+            font-size: 2.2em;
+            margin: 20px 0 10px;
+        }
+
+        .profile-title {
+            font-size: 1.5em;
+            color: #dcdcdc;
+        }
+
+        .profile-description {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #a5a5a5;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: rgba(16, 42, 79, 0.9);
+            padding: 30px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .contact-info a {
+            color: #00c4ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #1a8cff;
+        }
+
+        /* Recent Work Carousel */
+        .carousel {
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Buttons Section */
+        .buttons-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .buttons-section button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #1c466a;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            flex: 0 1 calc(45% - 20px);
+        }
+
+        .buttons-section button:hover {
+            background-color: #ff4081;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(16, 42, 79, 0.9);
+            color: white;
+        }
+
+        .footer button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #0047ab;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .footer button:hover {
+            background-color: #ff4081;
+        }
+
+        /* Popup Styles */
+        .popup {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 90%;
+            color: #333;
+            position: relative;
+        }
+
+        .popup img {
+            max-width: 300px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #e74c3c;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="profile">
+            <img src="images/6.jpg" alt="Laxmi Nand Dhakal" class="profile-img">
+            <h1 class="profile-name">Laxmi Nand Dhakal</h1>
+            <h2 class="profile-title">Innovator | Educator | Patent Holder</h2>
+            <p class="profile-description">Helping people discover their creative passion through science for over 30 years.</p>
+        </div>
+    </header>
+
+    <!-- Recent Work & Innovation Carousel -->
+    <section class="recent-work">
+        <h3>Approved Patent & Innovations</h3>
+        <div class="carousel" id="carousel">
+            <img src="images/1.jpg" alt="Innovation 1">
+            <img src="images/2.jpg" alt="Innovation 2">
+            <img src="images/3.jpg" alt="Innovation 3">
+            <img src="images/4.jpg" alt="Innovation 4">
+            <img src="images/5.jpg" alt="Innovation 5">
+            <img src="images/6.jpg" alt="Innovation 6">
+        </div>
+    </section>
+
+    <!-- Contact Buttons Section -->
+    <section class="buttons-section">
+        <button onclick="window.open('sms:+9779856044647', '_self')">Send SMS</button>
+        <button onclick="window.open('tel:+9779856044647', '_self')">Call</button>
+        <button onclick="window.open('mailto:csplaxmi2022@gmail.com', '_self')">Email</button>
+        <button onclick="window.open('https://wa.me/9779856044647', '_blank')">WhatsApp</button>
+        <button onclick="window.open('https://creativescienceproject.com', '_blank')">Visit Website</button>
+        <button onclick="downloadVCard()">Download vCard</button>
+        <button onclick="window.open('https://www.youtube.com/@CreativeScienceProject', '_blank')">Subscribe to YouTube</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <button onclick="sharePage()">Share This Page</button>
+        <button onclick="showPopup('images/page.png')">Share QR</button>
+        <button onclick="showDeveloperInfo()">About Developer</button>
+        <p>&copy; 2024 Laxmi Nand Dhakal | All Rights Reserved</p>
+    </footer>
+
+    <!-- Popup for QR Codes -->
+    <div class="popup" id="generic-popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hidePopup('generic-popup')">&times;</span>
+            <img id="popup-image" src="" alt="QR Code">
+        </div>
+    </div>
+
+    <!-- Popup for Developer Info -->
+    <div class="popup" id="developer-popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hidePopup('developer-popup')">&times;</span>
+            <p>This page was developed with love by Anup Chapain. For any inquiries or custom page development:</p>
+            <p>Email: <a href="mailto:pleasedontgetconfused@gmail.com">pleasedontgetconfused@gmail.com</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/anupcp/" target="_blank">@anupcp</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#carousel img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        showSlide(currentSlide);
+
+        // Popup Logic for QR Codes
+        function showPopup(imageSrc) {
+            const popup = document.getElementById('generic-popup');
+            const popupImage = document.getElementById('popup-image');
+            popupImage.src = imageSrc;
+            popup.style.display = 'flex';
+        }
+
+        function hidePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+
+        // Download Visiting Card
+        function downloadVCard() {
+            const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Laxmi Nand Dhakal
+ORG:Innovator | Educator
+TEL;TYPE=WORK,VOICE:+9779856044647
+EMAIL:csplaxmi2022@gmail.com
+URL:https://creativescienceproject.com
+END:VCARD
+            `;
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Laxmi_Nand_Dhakal.vcf';
+            link.click();
+        }
+
+        // Share Page Logic
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Check out Laxmi Nand Dhakal\'s Page!',
+                    text: 'Explore Laxmi Nand Dhakal\'s personal page and more!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('Sharing is not supported on this device. Please use the QR code instead.');
+            }
+        }
+
+        // Show Developer Info
+        function showDeveloperInfo() {
+            document.getElementById('developer-popup').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
